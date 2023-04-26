@@ -4,7 +4,7 @@
 <form #loginForm="ngForm" (ngSubmit)="login()">
     <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" required email size="40">
+      <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" required email size="40" style="border-radius:8px">
       <div *ngIf="loginForm.controls.email.errors && (loginForm.controls.email.touched || loginForm.submitted)" class="text-danger">
         <div *ngIf="loginForm.controls.email.errors.required">Email is required.</div>
         <div *ngIf="loginForm.controls.email.errors.email">Please enter a valid email address.</div>
@@ -13,14 +13,19 @@
   
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" required minlength="6" size="40">
+      <div class="input-group">
+        <input type="{{ showPassword ? 'text' : 'password' }}"  id="password" name="password" class="form-control" [(ngModel)]="password" required minlength="6" size="40" style="border-radius:8px">
+        <span class="bi bi-eye"  (click)="showPassword = !showPassword">
+        </span>
+      </div>
       <div *ngIf="loginForm.controls.password.errors && (loginForm.controls.password.touched || loginForm.submitted)" class="text-danger">
         <div *ngIf="loginForm.controls.password.errors.required">Password is required.</div>
-        <div *ngIf="loginForm.controls.password.errors.minlength">Password must be at least 6 characters long.</div>
+        <div *ngIf="loginForm.controls.password.errors.minlength" >Password must be at least 6 characters long.</div>
       </div>
     </div>
-  
+  <div class="button1">
     <button type="submit" class="btn btn-primary" [disabled]="!loginForm.valid" routerLink="/product">Login</button>
+    </div>
   </form>
   </div>
   </div>

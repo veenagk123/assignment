@@ -9,7 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CartComponent } from './cart/cart.component'
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -20,7 +20,6 @@ import { CartComponent } from './cart/cart.component'
     FooterComponent,
     ProductsComponent,
     CartComponent,
-    
   ],
   imports: [
     BrowserModule,

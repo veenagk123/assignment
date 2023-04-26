@@ -13,3 +13,17 @@
     margin: 0;
     padding: 0;
   }
+  .input-group-text {
+    cursor: pointer;
+  }
+  .bi-eye{
+    position:absolute;
+    z-index: 10;
+    right: 5%;
+    top: 7px;
+    color:rgb(16, 16, 24);
+}
+.btn-primary{
+  text-align: center;
+  left:10;
+}

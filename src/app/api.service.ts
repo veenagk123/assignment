@@ -10,8 +10,8 @@ export class ApiService {
   constructor(private http : HttpClient) { }
 
   getProduct(){
-    return this.http.get<any>("https://jsonplaceholder.typicode.com/photos")
-    .pipe(map((res:any)=>{
+    return this.http.get<any>("https://jsonplaceholder.typicode.com/photos")//it is observable of type any.
+    .pipe(map((res:any)=>{ 
       return res;
     }))
   }

@@ -3,8 +3,8 @@ import { ApiService } from 'src/app/api.service';
 import { CartService } from '../cart.service';
 // import { Api2Service } from '../api2.service';
 import { HttpClient } from '@angular/common/http';
-
-
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -14,9 +14,12 @@ import { HttpClient } from '@angular/common/http';
 export class ProductsComponent {
   public productList :any;
   public imageUrl: any = {};
+  emailId!:string;
 
-  constructor(private api : ApiService, private cartService: CartService,private http:HttpClient){}
-
+  constructor(private router: Router,private route: ActivatedRoute,private api : ApiService, private cartService: CartService,private http:HttpClient){
+  this.emailId = this.route.snapshot.queryParamMap.get('emailId');
+  //console.log(`Received emailId query parameter: ${this.emailId}`);
+  }
   ngOnInit(): void{
     this.api.getProduct()
     .subscribe(res=>{
@@ -34,7 +37,6 @@ export class ProductsComponent {
         this.imageUrl[id] = data.image;
       });
   }
-
   addtocart(item:any){
     this.cartService.addtoCart(item);
     }
