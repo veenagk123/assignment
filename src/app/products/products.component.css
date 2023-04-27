@@ -1,13 +1,5 @@
 
-/* .card-top{
-    position:absolute;
-    display: flex;
-    flex-direction: column;
-    min-width:0;
-    word-wrap:break-word;
-    background-clip:border-box;
-    border:1px solid black;
-} */
+
 .item{
     margin: 0px 15px;
     text-align: center;
@@ -16,8 +8,9 @@
     color: blue;
 }
 .card{
+    margin: 10px;
     padding: 20px;
-    margin: 50px;
+
 }
 .card img{
     width:150px;

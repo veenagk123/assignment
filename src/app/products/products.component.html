@@ -5,7 +5,7 @@
         <div class="col">
           <div class="card">
             <a [routerLink]="['/product-details', item.id]">
-            <img [src]="imageUrl[item.id]" alt="">
+              <img [src]="imageUrl[item.id]" class="card-img-top lazy-load-image" alt="...">
             </a>
             <h5 class="card-title">{{item.title}}</h5>
             <h5 class="card-subtitle">{{item.albumId}}</h5>

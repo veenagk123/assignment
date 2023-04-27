@@ -12,8 +12,7 @@ export class ProductDetailsComponent implements OnInit {
 
   item: any;
   imageUrl: string = '';
-  price: number = 100; // Dummy price for demonstration purposes
-
+  price: number = 100; 
   constructor(private cartService: CartService,private route: ActivatedRoute, private http: HttpClient,) { }
 
   ngOnInit(): void {
