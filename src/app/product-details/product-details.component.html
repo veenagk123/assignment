@@ -10,7 +10,7 @@
           <p><strong>Price:$</strong>{{price}}</p>
           <p><strong>Album ID:</strong> {{item.albumId}}</p>
           <p><strong>ID:</strong> {{item.id}}</p>
-        <button (click)="addtocart(item)" class="btn btn-primary align-self-end">Add To Cart</button>
+        <button style="width:200px;" (click)="addtocart(item)" class="btn btn-primary align-self-end">Add To Cart</button>
         <br>
         <br>
         <p>Easy 15 days return and exchange. Return Policies may vary based on products and promotions. For full details on our Returns Policies, please click here․</p>
@@ -25,12 +25,12 @@
           <h4>Ratings:</h4>
           <div *ngFor="let rating of ratings">
             <p>Rated {{rating.value}} out of 5 stars by {{rating.user}}</p>
-            <div  style="color: rgb(239, 214, 28);"class="rating-stars">
-              <i class="fa fa-star" [ngClass]="{'checked': rating.value >= 1}"></i>
-              <i class="fa fa-star" [ngClass]="{'checked': rating.value >= 2}"></i>
-              <i class="fa fa-star" [ngClass]="{'checked': rating.value >= 3}"></i>
-              <i class="fa fa-star" [ngClass]="{'checked': rating.value >= 4}"></i>
-              <i class="fa fa-star" [ngClass]="{'checked': rating.value >= 5}"></i>
+            <div  style="color: rgb(239, 214, 28);">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
             </div>
           </div>
         </div>
