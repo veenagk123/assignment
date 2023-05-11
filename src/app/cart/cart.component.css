@@ -1,32 +1,15 @@
 
-.card-product table {
-    border-spacing: 0;
-    width: 100%;
-    text-align: left;
-  }
-  
   .card-product th,
   .card-product td {
     padding: 10px;
     vertical-align: top;
   }
-  
   .card-product th {
     font-weight: bold;
   }
   
-  .card-product td img {
-    display: block;
-    margin: 0 auto;
-  }
-  
 .btn-danger{
     margin-right: 20px;
-}
-.card{
-    height:60vh;
-    margin:25px;
-    padding:25px;
 }
 
 .center{
@@ -36,23 +19,44 @@
     transform: translate(-50%,-50%);
     text-align: center;
 }
-.card-table{
-    position:relative;
-    display: flex;
-    flex-direction:column;
-    min-width:none;
-    word-wrap:break-word;
-    background-color: whitesmoke;
-    border: 1px solid black;
-    border-radius: .25rem; 
-}
+
 .center .btn{
     font-size: 14px !important;
     margin-top: 20px !important;
     font-weight: 400;
     padding: 12px 72px;
     border-radius:3px !important;
+} 
+.card{
+  height:60vh;
+  margin:25px;
+  padding:25px;
 }
+
+.card-product td img {
+  display: block;
+  margin: 0 auto;
+}
+.card-product table {
+  border-spacing: 0;
+  width: 100%;
+  text-align: left;
+}
+.center .btn{
+  font-size: 14px !important;
+  margin-top: 20px !important;
+  font-weight: 400;
+  padding: 12px 72px;
+  border-radius:3px !important;
+}
+.center{
+  position:absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
 .table2{
     margin-top: 50px;
     display: flex;
@@ -62,34 +66,54 @@
   .table2 button {
     flex-basis: calc(33.33% - 10px);
     margin-bottom: 10px;
+  } 
+
+  .card-table{
+    position:relative;
+    display: flex;
+    flex-direction:column;
+    min-width:none;
+    word-wrap:break-word;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: .25rem; 
+} 
+   .container {
+    display: flex;
+    flex-direction: column;
   }
-@media (max-width: 700px) {
-    table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-    }
-    tr {
-      display: block;
-    }
-    td {
-      display: block;
-      text-align: center;
-    }
-    td:first-child {
-      position: sticky;
-      top: 0;
-      left: 0;
-      background-color: white;
-    }
-    td:last-child {
-      position: sticky;
-      top: 0;
-      right: 0;
-      background-color: white;
-    }
+  
+  .card-table {
+    overflow-x: auto;
+  }
+  
+    .card-product thead {
+      flex-basis: 0;
+      flex-grow: 1;
+      text-align: left;
+  }
     
+  .card-product th {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: left;
+  } 
+  
+   .card-product th:nth-child(4) {
+    flex-basis: 100px;
+  } 
+ 
+  .card-product td {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: left;
+  } 
+  .example-spacer {
+    flex: 1 1 auto;
   }
-  
-  
-  
+ 
+  .card-product td:nth-child(4) {
+    flex-basis: 100px;
+  }
+   
+ 

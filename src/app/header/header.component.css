@@ -4,15 +4,7 @@
     width: 600px;
     margin-left: 20px;
 }
-
-/* @media (max-width: 700px) { 
-  .navbar-brand {
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-  }
-  .form-group {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-} */
+.class2{
+    display: flex;
+    justify-content: flex-end;
+}

@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
-import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatNativeDateModule} from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,11 +29,15 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     BrowserModule,
-    LazyLoadImageModule,
     ReactiveFormsModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule,
+    MatIconModule,
+   
     
   ],
   providers: [],
